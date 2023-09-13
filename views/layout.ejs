@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Messages</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            background-color: #f9fafb;
+            color: #3d4852;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            margin-right: auto;
+            width: 100%;
+            max-width: 150px;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: block;
+            }
+            
+            .logo {
+                margin-right: 2rem;
+            }
+        }
+        
+        .nav-item {
+            position: relative;
+            margin-left: 2rem;
+        }
+        
+        .nav-link {
+            color: #3d4852;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #3d4852;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .active-link {
+            color: #ff6347;
+        }
+        
+        .active-link::after {
+            transform: scaleX(1);
+        }
+        
+        .message-box {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message-input {
+            resize: vertical;
+            min-height: 100px;
+            padding: 1rem;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+        
+        .message-input:focus {
+            border-color: #3d4852;
+        }
+        
+        .btn {
+            appearance: none;
+            background-color: #ff6347;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #ff7759;
+        }
+        
+        .footer {
+            background-color: #3d4852;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .copyright {
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#" class="nav-link active-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <section class="message-box">
+        <p>Send anonymous messages to your friends and family.</p>
+        <form action="" method="post">
+            <textarea name="message" placeholder="Type your message here..." class="message-input"></textarea>
+            
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; Copyright 2023 Anonymous Messages. All rights reserved.</p>
+    </footer>
+</body>
+</html>

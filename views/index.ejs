@@ -1,0 +1,34 @@
+<!-- layout.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anonymous Messages</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Inclua os estilos do Tailwind CSS aqui -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 p-12">
+        <div class="left">
+          <h1 class="text-white text-2xl font-bold float-left">
+            <a href="/" class="text-white hover:underline">Anonymous Messages</a></h1>
+        </div>
+        <div class="right">
+          <ul class="flex space-x-4 float-right">
+            <li><a href="/messages" class="text-white hover:underline">Mensagens</a></li>
+            <li><a href="/" class="text-white hover:underline">Enviar Mensagem</a></li>
+            <!-- Adicione links para outras rotas aqui -->
+          </ul>
+        </div>
+      </header>
+    <main class="container mx-auto p-4">
+<!-- index.ejs -->
+<form method="POST" action="/send" class="max-w-md mx-auto my-4 p-4 bg-white rounded-lg shadow-md">
+    <label for="content" class="block font-bold text-gray-700">Digite sua mensagem:</label>
+    <textarea id="content" name="content" rows="4" class="w-full mt-2 px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+    <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Enviar</button>
+</form>
+</main>
+</body>
+</html>
