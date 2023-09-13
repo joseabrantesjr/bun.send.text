@@ -1,24 +1,6 @@
-# bun.send.text
+# Bun Send Text
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-# bun.send.text
-
-
-# Bun Message Board
-
-Welcome to the Node.js Message Board repository! This is a simple web application built with Node.js and Express.js that allows users to post, edit, and delete messages. We encourage collaboration and contributions from the community to make this project even better.
+Welcome to the Bun Send Textrepository! This is a simple web application built with bun Node.js and Express.js that allows users to post, edit, and delete messages. We encourage collaboration and contributions from the community to make this project even better.
 
 ## Getting Started
 
@@ -59,7 +41,6 @@ Clone Your Fork: Clone your forked repository to your local machine.
 Create a New Branch: Create a new branch for your feature or bug fix.
 
 ```bash
-Copy code
 git checkout -b feature/your-feature-name
 ```
 
