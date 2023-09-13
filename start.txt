@@ -1,3 +1,0 @@
-source /Users/josecalazans/.bashrc
-sudo chown -R josecalazans:staff /Users/josecalazans/Downloads
-sudo chmod -R u+rw /Users/josecalazans/Downloads
