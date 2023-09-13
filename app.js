@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 app.get('/messages', (req, res) => {
   db.all('SELECT * FROM messages', (err, rows) => {
     if (err) {
-      return res.status(500).json({ error: 'Erro ao buscar mensagens' });
+      return res.status(500).json({ error: 'Error when fetching messages' });
     }
     res.render('messages.ejs', { messages: rows });
   });
@@ -26,7 +26,7 @@ app.get('/edit/:id', (req, res) => {
   const messageId = req.params.id;
   db.get('SELECT * FROM messages WHERE id = ?', [messageId], (err, row) => {
     if (err) {
-      return res.status(500).json({ error: 'Erro ao buscar mensagem' });
+      return res.status(500).json({ error: 'Error fetching message' });
     }
     res.render('edit.ejs', { message: row });
   });
@@ -37,7 +37,7 @@ app.post('/edit/:id', (req, res) => {
   const updatedContent = req.body.content;
   db.run('UPDATE messages SET content = ? WHERE id = ?', [updatedContent, messageId], (err) => {
     if (err) {
-      return res.status(500).json({ error: 'Erro ao atualizar mensagem' });
+      return res.status(500).json({ error: 'Error updating message' });
     }
     res.redirect('/messages');
   });
@@ -48,7 +48,7 @@ app.get('/delete/:id', (req, res) => {
   const messageId = req.params.id;
   db.run('DELETE FROM messages WHERE id = ?', [messageId], (err) => {
     if (err) {
-      return res.status(500).json({ error: 'Erro ao excluir mensagem' });
+      return res.status(500).json({ error: 'Error deleting message' });
     }
     res.redirect('/messages');
   });
@@ -63,13 +63,13 @@ app.post('/send', (req, res) => {
 
   db.run('INSERT INTO messages (content) VALUES (?)', [content], (err) => {
     if (err) {
-      return res.status(500).json({ error: 'Erro ao enviar mensagem' });
+      return res.status(500).json({ error: 'Error sending message' });
     }
     res.redirect('/messages');
   });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

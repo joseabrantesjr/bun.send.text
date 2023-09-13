@@ -16,8 +16,8 @@
         </div>
         <div class="right">
           <ul class="flex space-x-4 float-right">
-            <li><a href="/messages" class="text-white hover:underline">Mensagens</a></li>
-            <li><a href="/" class="text-white hover:underline">Enviar Mensagem</a></li>
+            <li><a href="/messages" class="text-white hover:underline">Message</a></li>
+            <li><a href="/" class="text-white hover:underline">Send Message</a></li>
             <!-- Adicione links para outras rotas aqui -->
           </ul>
         </div>
@@ -29,13 +29,13 @@
         <li class="bg-white border rounded-lg mb-2 px-4 py-2 shadow-md flex justify-between">
             <div><%= message.content %></div>
             <div>
-                <a href="/edit/<%= message.id %>" class="text-blue-500 hover:underline">Editar</a>
-                <a href="/delete/<%= message.id %>" class="text-red-500 hover:underline">Excluir</a>
+                <a href="/edit/<%= message.id %>" class="text-blue-500 hover:underline">Edit</a>
+                <a href="/delete/<%= message.id %>" class="text-red-500 hover:underline">Delete</a>
             </div>
         </li>
     <% }); %>
 </ul>
-<a href="/" class="block text-blue-500 hover:underline mt-4">Enviar outra mensagem</a>
+<a href="/" class="block text-blue-500 hover:underline mt-4">Send other message</a>
 
 </main>
 </body>

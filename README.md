@@ -1,4 +1,4 @@
-# send-e-mail-bun
+# bun.send.text
 
 To install dependencies:
 
