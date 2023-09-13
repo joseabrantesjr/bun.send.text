@@ -61,8 +61,9 @@ Submit a Pull Request: Open a pull request from your fork to the main repository
 
 If you find any issues or have suggestions for improvements, please open an issue on the GitHub repository. Be sure to provide as much detail as possible to help us understand the problem.
 
+
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 Thank you for considering contributing to this project! We look forward to your contributions and collaboration.
