@@ -26,6 +26,7 @@
         <form method="POST" action="/edit/<%= message.id %>" class="max-w-md mx-auto my-4 p-4 bg-white rounded-lg shadow-md">
             <label for="content" class="block font-bold text-gray-700">Edit Message:</label>
             <textarea id="content" name="content" rows="4" class="w-full mt-2 px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"><%= message.content %></textarea>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"><a href="/messages" >Back</a></button>
             <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Save</button>
         </form>
     </main>
